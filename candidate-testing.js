@@ -77,12 +77,13 @@ function gradeQuiz(candidateAnswers) {
 
     if (percentage >= 80) {
       console.log(`>>> Overall Grade: ${percentage}% (${tally} of 5 responses correct) <<<\n>>> Status: PASSED <<<`);
+      return percentage;
     } else {
       console.log(`>>> Overall Grade: ${percentage}% (${tally} of 5 responses correct) <<<\n>>> Status: FAILED <<<`);
+      return percentage;
     }
-    return percentage;
   }
-  return grade;
+  return grade(candidateAnswers, correctAnswers);
 }
 
 function runProgram() {
