@@ -80,9 +80,9 @@ function gradeQuiz(candidateAnswers) {
     } else {
       console.log(`>>> Overall Grade: ${percentage}% (${tally} of 5 responses correct) <<<\n>>> Status: FAILED <<<`);
     }
+    return percentage;
   }
-  
-  return percentage;
+  return grade;
 }
 
 function runProgram() {
